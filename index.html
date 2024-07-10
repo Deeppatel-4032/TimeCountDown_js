@@ -14,7 +14,6 @@
             height: 100%;
             margin: 0;
         }
-
         body {
             align-items: center;
             display: flex;
@@ -34,7 +33,6 @@
         .modal-content {
             width: 800px;
         }
-
     </style>
 </head>
 
@@ -43,21 +41,28 @@
     <div class="modal fade" id="openModel" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered" style="width: 800px";>
           <div class="modal-content">
-            <div class="modal-header">
-              <h2 class="modal-title fs-2 text-center" id="exampleModalToggleLabel">Set your Time</h2>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-header d-flex justify-content-center align-items-center">
+              <h2 class="modal-title text-center" id="exampleModalToggleLabel">Set Time</h2>
             </div>
             <div class="modal-body">
                 <div>
                     <ul class="d-flex text-center">
-                        <li> <label for="recipient-name" class="col-form-label">Day</label>
-                        <input type="text" class="form-control" style="width: 100px;" id="days" placeholder="Days">
-                        <li> <label for="recipient-name" class="col-form-label">Hours</label>
-                        <input type="text" class="form-control" style="width: 100px;" id="hours" placeholder="Hours">
-                        <li> <label for="recipient-name" class="col-form-label">Minutes</label>
-                        <input type="text" class="form-control" style="width: 100px;" id="minutes" placeholder="Minutes">
-                        <li> <label for="recipient-name" class="col-form-label">Seconds</label>
-                        <input type="text" class="form-control" style="width: 100px;" id="seconds" placeholder="Seconds"> 
+                        <li> 
+                            <label for="recipient-name" class="col-form-label">Day</label>
+                            <input type="text" class="form-control" style="width: 100px;" id="days" placeholder="Days">
+                        </li>
+                        <li>
+                            <label for="recipient-name" class="col-form-label">Hours</label>
+                            <input type="text" class="form-control" style="width: 100px;" id="hours" placeholder="Hours">
+                        </li>
+                        <li> 
+                            <label for="recipient-name" class="col-form-label">Minutes</label>
+                            <input type="text" class="form-control" style="width: 100px;" id="minutes" placeholder="Minutes">
+                        </li>
+                        <li> 
+                            <label for="recipient-name" class="col-form-label">Seconds</label>
+                            <input type="text" class="form-control" style="width: 100px;" id="seconds" placeholder="Seconds"> 
+                        </li>
                     </ul>
                 </div>
             </div>

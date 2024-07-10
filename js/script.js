@@ -37,7 +37,6 @@ const choice = () => {
 
 //setTimOut Function
 const setTime = () => {
-    console.log("hello");
     Interval = setInterval(() => {
         s--;
         if(d <= 0) {
@@ -83,8 +82,6 @@ const setTime = () => {
         }
     }, 1000);
 }
-
-
 
 //timeOutStop Function count down stop karva 
 const timeOutStop = () => {
