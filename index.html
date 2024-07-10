@@ -40,11 +40,11 @@
 
 <body>
     <!-- model -->
-    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal fade" id="openModel" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered" style="width: 800px";>
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+              <h2 class="modal-title fs-2 text-center" id="exampleModalToggleLabel">Set your Time</h2>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -60,9 +60,9 @@
                         <input type="text" class="form-control" style="width: 100px;" id="seconds" placeholder="Seconds"> 
                     </ul>
                 </div>
-                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" onclick="return choice()">Submit</button>
             </div>
-          </div>
+            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" onclick="return choice()">Submit</button>
+        </div>
         </div>
       </div>
     <div class="container text-center">
@@ -75,8 +75,8 @@
                 <li><span id="second">00</span>Seconds</li>
             </ul>
         </div>
-        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Set your Time</button>
-        <button type="button" class="btn btn-outline-primary" onclick="return setTimeOut()">start Countdown</button>
+        <button class="btn btn-primary" data-bs-target="#openModel" data-bs-toggle="modal">Set your Time</button>
+        <button type="button" class="btn btn-outline-primary" onclick="return setTime()">start Countdown</button>
         <button type="button" class="btn btn-outline-primary" onclick="return timeOutStop()">Stop Countdown</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

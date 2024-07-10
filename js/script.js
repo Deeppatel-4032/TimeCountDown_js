@@ -18,7 +18,6 @@ let s = 0;
 let Interval;
 
 const choice = () => {
-    console.log("dome")
     let dy = JSON.parse(days.value);
     let ho = JSON.parse(hours.value);
     let mi = JSON.parse(minutes.value);
@@ -34,49 +33,58 @@ const choice = () => {
     minute.innerHTML = m;
     second.innerHTML = s;
     
-    //setTimOut Function
-    const setTimeOut = () => {
-        Interval = setInterval(() => {
-            s++;
-            if (s < 10) {
-                second.innerHTML = "0" + s;
-            } else {
-                second.innerHTML = s;
-            }
-            
-            if (s > 59) {
-                m++;
-                s = 0;
-                if (m < 10) {
-                    minute.innerHTML = "0" + m;
-                } else {
-                    minute.innerHTML = m;
-                }
-            }
-            
-            if (m > 59) {
-                h++;
-                m = 0;
-                if (h < 10) {
-                    hour.innerHTML = "0" + h;
-                } else {
-                    hour.innerHTML = h;
-                }
-            }
-            
-            if (h > 23) {
-                d++;
-                h = 0;
-                if (d < 10) {
-                    day.innerHTML = "0" + d;
-                } else {
-                    day.innerHTML = d;
-                }
-            }
-        }, 10);
-    }
-    setTimeOut();
 }
+
+//setTimOut Function
+const setTime = () => {
+    console.log("hello");
+    Interval = setInterval(() => {
+        s--;
+        if(d <= 0) {
+            h--;
+            d = 24;
+            if (h < 10) {
+                hour.innerHTML = "0" + h;
+            } else {
+                hour.innerHTML = h;
+            }
+        }
+        if (h <= 0) {
+            d--;
+            h = 23;
+            if (d < 10) {
+                day.innerHTML = "0" + d;
+            } else {
+                day.innerHTML = d;
+            }
+        }
+        if (m <= 0) {
+            h--;
+            m = 59;
+            if (h < 10) {
+                hour.innerHTML = "0" + h;
+            } else {
+                hour.innerHTML = h;
+            }
+        }
+        if (s <= 0) {
+            m--; // -1
+            s = 59;
+            if (m < 10) {
+                minute.innerHTML = "0" + m;
+            } else {
+                minute.innerHTML = m;
+            }
+        }
+        if (s < 10) {
+            second.innerHTML = "0" + s;
+        } else {
+            second.innerHTML = s;
+        }
+    }, 1000);
+}
+
+
 
 //timeOutStop Function count down stop karva 
 const timeOutStop = () => {
