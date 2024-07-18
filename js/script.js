@@ -23,15 +23,10 @@ const choice = () => {
     let mi = JSON.parse(minutes.value);
     let se = JSON.parse(minutes.value);
 
-    d = dy;
-    h = ho;
-    m = mi;
-    s = se;
-
-    day.innerHTML = d;
-    hour.innerHTML = h;
-    minute.innerHTML = m;
-    second.innerHTML = s;
+    day.innerHTML = dy;
+    hour.innerHTML = ho;
+    minute.innerHTML = mi;
+    second.innerHTML = se;
     
 }
 
@@ -39,7 +34,7 @@ const choice = () => {
 const setTime = () => {
     Interval = setInterval(() => {
         s--;
-        if(d <= 0) {
+        if(d <= 0) {   
             h--;
             d = 24;
             if (h < 10) {
@@ -48,6 +43,7 @@ const setTime = () => {
                 hour.innerHTML = h;
             }
         }
+
         if (h <= 0) {
             d--;
             h = 23;
@@ -57,6 +53,7 @@ const setTime = () => {
                 day.innerHTML = d;
             }
         }
+
         if (m <= 0) {
             h--;
             m = 59;
@@ -66,6 +63,7 @@ const setTime = () => {
                 hour.innerHTML = h;
             }
         }
+
         if (s <= 0) {
             m--; // -1
             s = 59;
@@ -75,6 +73,7 @@ const setTime = () => {
                 minute.innerHTML = m;
             }
         }
+
         if (s < 10) {
             second.innerHTML = "0" + s;
         } else {
